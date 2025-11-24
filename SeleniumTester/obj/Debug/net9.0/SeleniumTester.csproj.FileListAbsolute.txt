@@ -1,0 +1,8 @@
+C:\Users\Jazztime\Desktop\TARge24\Tarkvarasüsteemide_Testimine\SeleniumTester\SeleniumTester\SeleniumTester\SeleniumTester\obj\Debug\net9.0\SeleniumTester.csproj.AssemblyReference.cache
+C:\Users\Jazztime\Desktop\TARge24\Tarkvarasüsteemide_Testimine\SeleniumTester\SeleniumTester\SeleniumTester\SeleniumTester\obj\Debug\net9.0\SeleniumTester.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Jazztime\Desktop\TARge24\Tarkvarasüsteemide_Testimine\SeleniumTester\SeleniumTester\SeleniumTester\SeleniumTester\obj\Debug\net9.0\SeleniumTester.gentestingplatformentrypointinputcache.cache
+C:\Users\Jazztime\Desktop\TARge24\Tarkvarasüsteemide_Testimine\SeleniumTester\SeleniumTester\SeleniumTester\SeleniumTester\obj\Debug\net9.0\SeleniumTester.genautoregisteredextensionsinputcache.cache
+C:\Users\Jazztime\Desktop\TARge24\Tarkvarasüsteemide_Testimine\SeleniumTester\SeleniumTester\SeleniumTester\SeleniumTester\obj\Debug\net9.0\SeleniumTester.AssemblyInfoInputs.cache
+C:\Users\Jazztime\Desktop\TARge24\Tarkvarasüsteemide_Testimine\SeleniumTester\SeleniumTester\SeleniumTester\SeleniumTester\obj\Debug\net9.0\SeleniumTester.AssemblyInfo.cs
+C:\Users\Jazztime\Desktop\TARge24\Tarkvarasüsteemide_Testimine\SeleniumTester\SeleniumTester\SeleniumTester\SeleniumTester\obj\Debug\net9.0\SeleniumTester.csproj.CoreCompileInputs.cache
+C:\Users\Jazztime\Desktop\TARge24\Tarkvarasüsteemide_Testimine\SeleniumTester\SeleniumTester\SeleniumTester\SeleniumTester\obj\Debug\net9.0\SeleniumTester.sourcelink.json
