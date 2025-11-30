@@ -1,10 +1,10 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Jazztime\\Desktop\\TARge24\\Tarkvaras\u00FCsteemide_Testimine\\SeleniumTester\\SeleniumTester\\SeleniumTester\\",
+  "WorkspaceRootPath": "C:\\Users\\Jazztime\\Desktop\\TARge24\\Tarkvaras\u00FCsteemide_Testimine\\SeleniumTester\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{B9E5F31F-C23D-40DB-8A6A-0A3FA987AC42}|SeleniumTester\\SeleniumTester.csproj|c:\\users\\jazztime\\desktop\\targe24\\tarkvaras\u00FCsteemide_testimine\\seleniumtester\\seleniumtester\\seleniumtester\\seleniumtester\\unittest1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B9E5F31F-C23D-40DB-8A6A-0A3FA987AC42}|SeleniumTester\\SeleniumTester.csproj|solutionrelative:seleniumtester\\unittest1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B9E5F31F-C23D-40DB-8A6A-0A3FA987AC42}|SeleniumTester\\SeleniumTester.csproj|c:\\users\\jazztime\\desktop\\targe24\\tarkvaras\u00FCsteemide_testimine\\seleniumtester\\seleniumtester\\unittest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B9E5F31F-C23D-40DB-8A6A-0A3FA987AC42}|SeleniumTester\\SeleniumTester.csproj|solutionrelative:seleniumtester\\unittest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,21 +14,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "UnitTest1.cs",
-              "DocumentMoniker": "C:\\Users\\Jazztime\\Desktop\\TARge24\\Tarkvaras\u00FCsteemide_Testimine\\SeleniumTester\\SeleniumTester\\SeleniumTester\\SeleniumTester\\UnitTest1.cs",
-              "RelativeDocumentMoniker": "SeleniumTester\\UnitTest1.cs",
-              "ToolTip": "C:\\Users\\Jazztime\\Desktop\\TARge24\\Tarkvaras\u00FCsteemide_Testimine\\SeleniumTester\\SeleniumTester\\SeleniumTester\\SeleniumTester\\UnitTest1.cs",
-              "RelativeToolTip": "SeleniumTester\\UnitTest1.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-30T20:36:33.425Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
@@ -36,6 +23,19 @@
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "UnitTest.cs",
+              "DocumentMoniker": "C:\\Users\\Jazztime\\Desktop\\TARge24\\Tarkvaras\u00FCsteemide_Testimine\\SeleniumTester\\SeleniumTester\\UnitTest.cs",
+              "RelativeDocumentMoniker": "SeleniumTester\\UnitTest.cs",
+              "ToolTip": "C:\\Users\\Jazztime\\Desktop\\TARge24\\Tarkvaras\u00FCsteemide_Testimine\\SeleniumTester\\SeleniumTester\\UnitTest.cs",
+              "RelativeToolTip": "SeleniumTester\\UnitTest.cs",
+              "ViewState": "AgIAADkAAAAAAAAAAAAUwFMAAABRAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-30T20:36:33.425Z",
+              "EditorCaption": ""
             }
           ]
         },

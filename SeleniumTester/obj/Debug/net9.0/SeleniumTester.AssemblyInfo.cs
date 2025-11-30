@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SeleniumTester")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2ca1dc93ee533988eacf9729d601a6258f1a27d2")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+634ce601cab8d6df8e384fdcb2a00f7be156bedb")]
 [assembly: System.Reflection.AssemblyProductAttribute("SeleniumTester")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SeleniumTester")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
