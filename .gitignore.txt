@@ -1,0 +1,86 @@
+## --- VISUAL STUDIO GENERATED ---
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+## --- BUILD OUTPUT ---
+bin/
+obj/
+[Bb]uild/
+[Ll]og/
+[Dd]ebug*/
+[Rr]elease*/
+x64/
+x86/
+[Aa][Rr][Mm]/
+[Aa][Rr][Mm]64/
+*.dll
+*.exe
+*.pdb
+
+## --- CACHE AND TEMP FILES ---
+*.cache
+*.db
+*.db-shm
+*.db-wal
+*.ide
+*.tmp
+*.temp
+*.log
+
+## --- DOTNET TOOLING ---
+*.deps.json
+*.runtimeconfig.json
+*.nuget.props
+*.nuget.targets
+*.nuget.cache
+*.globalconfig
+
+## --- TEST RESULTS ---
+TestResults/
+*.trx
+*.coverage
+*.coveragexml
+
+## --- VISUAL STUDIO CODE ---
+.vscode/
+.history/
+
+## --- RIDER / RESHARPER ---
+.idea/
+*.sln.iml
+
+## --- DOTNET PACKAGE RESTORE ---
+packages/
+*.nupkg
+project.lock.json
+project.assets.json
+
+## --- AZURE / PUBLISHING ---
+.publish/
+*.pubxml
+*.pubxml.user
+
+## --- SELENIUM SPECIFIC ---
+selenium-screenshot*.png
+selenium-logs/
+selenium-downloads/
+
+## --- OPERATING SYSTEM ---
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Linux
+*~
+
+## --- GIT ---
+*.orig
