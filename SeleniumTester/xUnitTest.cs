@@ -4,7 +4,7 @@ using OpenQA.Selenium.Firefox;
 
 namespace ToolsQA
 {
-    class NUnitTest
+    class xUnitTest
     {
         IWebDriver driver;
 
