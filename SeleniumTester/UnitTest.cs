@@ -180,29 +180,25 @@ namespace TestProject
             IWebElement idOfLinkElement = driver.FindElement(By.Id("Kindergartens")); //otsi element Kindergartens id-ga
             idOfLinkElement.Click(); //vajuta sellele elemendile
             Thread.Sleep(500);
-            //Thread.Sleep(3000);
-            //driver.Navigate().Back();
+
             IWebElement idOfCreateButton = driver.FindElement(By.Id("CreateButtonAction"));
             idOfCreateButton.Click();
             Thread.Sleep(500);
+
             InsertNegativeKindergartenData(driver);
             IWebElement idOfCreatePostButton = driver.FindElement(By.Id("CreateButtonAction"));
             idOfCreatePostButton.Click();
             Thread.Sleep(500);
-            ICollection<IWebElement> elementstocheck = driver.FindElements(By.Id("testIdGrouN_I"));
 
-            IWebElement idOfGroupName = driver.FindElement(By.Id("testIdGrouN_I"));
-            var groupnameinindex = idOfGroupName.Text;
-            IWebElement idOfChildrenCount = driver.FindElement(By.Id("testChildrenC_I"));
-            var childrencountinindex = idOfChildrenCount.Text;
-            IWebElement idOfKindergartenName = driver.FindElement(By.Id("testKindergartenN_I"));
-            var kindergartennameindetails = idOfChildrenCount.Text;
-            IWebElement idOfTeacherName = driver.FindElement(By.Id("testTeacherN_I"));
-            var teachernameindetails = idOfTeacherName.Text;
+            // 1. No new record should appear
+            var rows = driver.FindElements(By.Id("testIdGrouN_I"));
+            Assert.That(rows.Count, Is.EqualTo(0));
 
-            NUnit.Framework.Assert.That(groupnameinindex, Is.EqualTo("Name"));
-            NUnit.Framework.Assert.That(childrencountinindex, Is.Not.EqualTo("500"));
-            Console.WriteLine("Test passed");
+            // 2. Optional: Page did not navigate away
+            //Assert.That(driver.Url, Does.Contain("create"));
+            Assert.That(driver.Url.ToLower(), Does.EndWith("/kindergartens/create"));
+
+            Console.WriteLine("Negative create test passed");
         }
 
         private static void InsertNegativeKindergartenData(IWebDriver driver)
@@ -229,30 +225,24 @@ namespace TestProject
             IWebElement idOfLinkElement = driver.FindElement(By.Id("Kindergartens")); //otsi element Kindergartens id-ga
             idOfLinkElement.Click(); //vajuta sellele elemendile
             Thread.Sleep(500);
-            //Thread.Sleep(3000);
-            //driver.Navigate().Back();
+
             IWebElement idOfCreateButton = driver.FindElement(By.Id("UpdateButtonAction"));
             idOfCreateButton.Click();
             Thread.Sleep(500);
+
             UpdateNegativeKindergartenData(driver);
             IWebElement idOfCreatePostButton = driver.FindElement(By.Id("UpdateButtonAction"));
             idOfCreatePostButton.Click();
             Thread.Sleep(500);
 
-            ICollection<IWebElement> elementstocheck = driver.FindElements(By.Id("testIdGrouN_I"));
+            UpdateNegativeKindergartenData(driver);
 
-            IWebElement idOfGroupName = driver.FindElement(By.Id("testIdGrouN_I"));
-            var groupnameinindex = idOfGroupName.Text;
-            IWebElement idOfChildrenCount = driver.FindElement(By.Id("testChildrenC_I"));
-            var childrencountinindex = idOfChildrenCount.Text;
-            IWebElement idOfKindergartenName = driver.FindElement(By.Id("testKindergartenN_I"));
-            var kindergartennameinindex = idOfKindergartenName.Text;
-            IWebElement idOfTeacherName = driver.FindElement(By.Id("testTeacherN_I"));
-            var Teachernameinindex = idOfTeacherName.Text;
+            driver.FindElement(By.Id("UpdateButtonAction")).Click();
+            Thread.Sleep(500);
 
-            NUnit.Framework.Assert.That(groupnameinindex, Is.EqualTo("NameName"));
-            NUnit.Framework.Assert.That(childrencountinindex, Is.Not.EqualTo("500500"));
-            Console.WriteLine("Test passed");
+            Assert.That(driver.Url.ToLower(), Does.EndWith("/kindergartens/update/d595be9d-4296-4a0d-be43-fbca55aeb3c4"));
+
+            Console.WriteLine("Negative update test passed");
         }
 
         private static void UpdateNegativeKindergartenData(IWebDriver driver)
