@@ -75,8 +75,8 @@ namespace TestProject
             Thread.Sleep(500);
             //Thread.Sleep(3000);
             //driver.Navigate().Back();
-            IWebElement idOfCreateButton = driver.FindElement(By.Id("DetailsButtonAction"));
-            idOfCreateButton.Click();
+            IWebElement idOfDetailsButton = driver.FindElement(By.Id("DetailsButtonAction"));
+            idOfDetailsButton.Click();
             Thread.Sleep(500);
 
 
@@ -111,8 +111,8 @@ namespace TestProject
             // Muudame andmed kustutades eelnevad ja sisestades uued
             UpdateKindergartenData(driver);
 
-            IWebElement idOfCreatePostButton = driver.FindElement(By.Id("UpdateButtonAction"));
-            idOfCreatePostButton.Click();
+            IWebElement idOfUpdatePostButton = driver.FindElement(By.Id("UpdateButtonAction"));
+            idOfUpdatePostButton.Click();
             Thread.Sleep(500);
 
             ICollection<IWebElement> elementstocheck = driver.FindElements(By.Id("testIdGrouN_I"));
@@ -161,19 +161,15 @@ namespace TestProject
             Thread.Sleep(500);
             //Thread.Sleep(3000);
             //driver.Navigate().Back();
-            IWebElement idOfCreateButton = driver.FindElement(By.Id("DeleteButtonAction"));
-            idOfCreateButton.Click();
+            IWebElement idOfDeleteButton = driver.FindElement(By.Id("DeleteButtonAction"));
+            idOfDeleteButton.Click();
             Thread.Sleep(500);
-            IWebElement idOfCreatePostButton = driver.FindElement(By.Id("DeleteButtonAction"));
-            idOfCreatePostButton.Click();
+
+            IWebElement idOfDeletePostButton = driver.FindElement(By.Id("DeleteButtonAction"));
+            idOfDeletePostButton.Click();
             Thread.Sleep(500);
 
             ICollection<IWebElement> elementstocheck = driver.FindElements(By.Id("testIdGrouN_I"));
-
-            //foreach (IWebElement elements in elementstocheck)
-            //{
-            //    Console.WriteLine(elements.Text);
-            //}
 
             var groupNameElements = driver.FindElements(By.Id("testIdGrouN_I"));
             var childrenCountElements = driver.FindElements(By.Id("testChildrenC_I"));
@@ -238,13 +234,23 @@ namespace TestProject
             idOfLinkElement.Click(); //vajuta sellele elemendile
             Thread.Sleep(500);
 
-            IWebElement idOfCreateButton = driver.FindElement(By.Id("UpdateButtonAction"));
+            IWebElement idOfCreateButton = driver.FindElement(By.Id("CreateButtonAction"));
             idOfCreateButton.Click();
             Thread.Sleep(500);
 
-            UpdateNegativeKindergartenData(driver);
-            IWebElement idOfCreatePostButton = driver.FindElement(By.Id("UpdateButtonAction"));
+            InsertCreatedKindergartenData(driver);
+
+            IWebElement idOfCreatePostButton = driver.FindElement(By.Id("CreateButtonAction"));
             idOfCreatePostButton.Click();
+            Thread.Sleep(500);
+
+            IWebElement idOfUpdateButton = driver.FindElement(By.Id("UpdateButtonAction"));
+            idOfUpdateButton.Click();
+            Thread.Sleep(500);
+
+            UpdateNegativeKindergartenData(driver);
+            IWebElement idOfUpdatePostButton = driver.FindElement(By.Id("UpdateButtonAction"));
+            idOfUpdatePostButton.Click();
             Thread.Sleep(500);
 
             UpdateNegativeKindergartenData(driver);
@@ -276,6 +282,22 @@ namespace TestProject
             idOfTeacherNameInput.Clear();
             idOfTeacherNameInput.SendKeys("Teacher");
 
-        }        
+        }
+
+        private static void InsertCreatedKindergartenData(IWebDriver driver)
+        {
+            IWebElement idOfGroupNameInput = driver.FindElement(By.Id("GroupNameInput"));
+            idOfGroupNameInput.SendKeys("Name");
+
+            IWebElement idOfChildrenCountInput = driver.FindElement(By.Id("ChildrenCountInput"));
+            idOfChildrenCountInput.SendKeys("500");
+
+            IWebElement idOfindergartenNameInput = driver.FindElement(By.Id("KindergartenNameInput"));
+            idOfindergartenNameInput.SendKeys("NameName");
+
+            IWebElement idOfTeacherNameInput = driver.FindElement(By.Id("TeacherNameInput"));
+            idOfTeacherNameInput.SendKeys("Teacher");
+
+        }
     }
 }
