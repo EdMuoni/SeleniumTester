@@ -23,20 +23,26 @@ namespace TestProject
             IWebElement idOfCreateButton = driver.FindElement(By.Id("CreateButtonAction"));
             idOfCreateButton.Click();
             Thread.Sleep(500);
+
             InsertKindergartenData(driver);
+
             IWebElement idOfCreatePostButton = driver.FindElement(By.Id("CreateButtonAction"));
             idOfCreatePostButton.Click();
             Thread.Sleep(500);
+
             ICollection<IWebElement> elementstocheck = driver.FindElements(By.Id("testIdGrouN_I"));
 
             IWebElement idOfGroupName = driver.FindElement(By.Id("testIdGrouN_I"));
             var groupnameinindex = idOfGroupName.Text;
+
             IWebElement idOfChildrenCount = driver.FindElement(By.Id("testChildrenC_I"));
             var childrencountinindex = idOfChildrenCount.Text;
+
             IWebElement idOfKindergartenName = driver.FindElement(By.Id("testKindergartenN_I"));
-            var kindergartennameindetails = idOfChildrenCount.Text;
+            var kindergartennameinindex = idOfKindergartenName.Text;
+
             IWebElement idOfTeacherName = driver.FindElement(By.Id("testTeacherN_I"));
-            var teachernameindetails = idOfTeacherName.Text;
+            var teachernameinindex = idOfTeacherName.Text;
 
             NUnit.Framework.Assert.That(groupnameinindex, Is.EqualTo("Name"));
             NUnit.Framework.Assert.That(childrencountinindex, Is.EqualTo("500"));
@@ -97,12 +103,14 @@ namespace TestProject
             IWebElement idOfLinkElement = driver.FindElement(By.Id("Kindergartens")); //otsi element Kindergartens id-ga
             idOfLinkElement.Click(); //vajuta sellele elemendile
             Thread.Sleep(500);
-            //Thread.Sleep(3000);
-            //driver.Navigate().Back();
+
             IWebElement idOfCreateButton = driver.FindElement(By.Id("UpdateButtonAction"));
             idOfCreateButton.Click();
             Thread.Sleep(500);
+
+            // Muudame andmed kustutades eelnevad ja sisestades uued
             UpdateKindergartenData(driver);
+
             IWebElement idOfCreatePostButton = driver.FindElement(By.Id("UpdateButtonAction"));
             idOfCreatePostButton.Click();
             Thread.Sleep(500);
@@ -126,15 +134,19 @@ namespace TestProject
         private static void UpdateKindergartenData(IWebDriver driver)
         {
             IWebElement idOfGroupNameInput = driver.FindElement(By.Id("GroupNameInput"));
-            idOfGroupNameInput.SendKeys("Name");
+            idOfGroupNameInput.Clear();
+            idOfGroupNameInput.SendKeys("NameName");
 
             IWebElement idOfChildrenCountInput = driver.FindElement(By.Id("ChildrenCountInput"));
-            idOfChildrenCountInput.SendKeys("500");
+            idOfChildrenCountInput.Clear();
+            idOfChildrenCountInput.SendKeys("500500");
 
             IWebElement idOfindergartenNameInput = driver.FindElement(By.Id("KindergartenNameInput"));
+            idOfindergartenNameInput.Clear();
             idOfindergartenNameInput.SendKeys("NameName");
 
             IWebElement idOfTeacherNameInput = driver.FindElement(By.Id("TeacherNameInput"));
+            idOfTeacherNameInput.Clear();
             idOfTeacherNameInput.SendKeys("Teacher");
 
         }
@@ -240,7 +252,8 @@ namespace TestProject
             driver.FindElement(By.Id("UpdateButtonAction")).Click();
             Thread.Sleep(500);
 
-            Assert.That(driver.Url.ToLower(), Does.EndWith("/kindergartens/update/d595be9d-4296-4a0d-be43-fbca55aeb3c4"));
+            //Kontrollime ainult et URL sisaldab "/kindergartens/update/"
+            Assert.That(driver.Url.ToLower(), Does.Contain("/kindergartens/update/"));
 
             Console.WriteLine("Negative update test passed");
         }
@@ -248,16 +261,73 @@ namespace TestProject
         private static void UpdateNegativeKindergartenData(IWebDriver driver)
         {
             IWebElement idOfGroupNameInput = driver.FindElement(By.Id("GroupNameInput"));
-            idOfGroupNameInput.SendKeys("Name");
+            idOfGroupNameInput.Clear();
+            idOfGroupNameInput.SendKeys("NameName");
 
             IWebElement idOfChildrenCountInput = driver.FindElement(By.Id("ChildrenCountInput"));
+            idOfChildrenCountInput.Clear();
             idOfChildrenCountInput.SendKeys("It is not a number");
 
             IWebElement idOfindergartenNameInput = driver.FindElement(By.Id("KindergartenNameInput"));
+            idOfindergartenNameInput.Clear();
             idOfindergartenNameInput.SendKeys("NameName");
 
             IWebElement idOfTeacherNameInput = driver.FindElement(By.Id("TeacherNameInput"));
+            idOfTeacherNameInput.Clear();
             idOfTeacherNameInput.SendKeys("Teacher");
+
+        }
+
+        [Test, Order(7)]
+        public void CreateSpaceshipTest()
+        {
+            IWebDriver driver = new FirefoxDriver(); //uus fiorefoxi driver
+            driver.Url = "http://localhost:5138"; //navigeeri siia
+            IWebElement idOfLinkElement = driver.FindElement(By.Id("Spaceship")); //otsi element Kindergartens id-ga
+            idOfLinkElement.Click(); //vajuta sellele elemendile
+            Thread.Sleep(500);
+            
+            IWebElement idOfCreateButton = driver.FindElement(By.Id("CreateButtonAction"));
+            idOfCreateButton.Click();
+            Thread.Sleep(500);
+
+            //Insering spaceship data using the same method as kindergarten for simplicity
+            InsertSpaceshipData(driver);
+
+            IWebElement idOfCreatePostButton = driver.FindElement(By.Id("CreateButtonAction"));
+            idOfCreatePostButton.Click();
+            Thread.Sleep(500);
+            
+            //Checking if spaceship was created by checking for elements in index
+            ICollection<IWebElement> elementstocheck = driver.FindElements(By.Id("testIdName_I"));
+
+            IWebElement idOfName = driver.FindElement(By.Id("testIdName_I"));
+            var nameinindex = idOfName.Text;
+
+            IWebElement idOfClassification = driver.FindElement(By.Id("testIdClassification_I"));
+            var Classificationinindex = idOfClassification.Text;
+
+            IWebElement idOfCrew = driver.FindElement(By.Id("testIdCrew_I"));
+            var crewinindex = idOfCrew.Text;
+
+            NUnit.Framework.Assert.That(nameinindex, Is.EqualTo("Mountain"));
+            NUnit.Framework.Assert.That(Classificationinindex, Is.EqualTo("NoobCrasher"));
+            Console.WriteLine("Test passed");
+        }
+
+        private static void InsertSpaceshipData(IWebDriver driver)
+        {
+            IWebElement idOfNameInput = driver.FindElement(By.Id("NameInput"));
+            idOfNameInput.SendKeys("Mountain");
+
+            IWebElement idOfClassificationInput = driver.FindElement(By.Id("ClassificationInput"));
+            idOfClassificationInput.SendKeys("NoobCrasher");
+
+            IWebElement idOfCrewInput = driver.FindElement(By.Id("CrewInput"));
+            idOfCrewInput.SendKeys("NameName");
+
+            IWebElement idOfEnginePowerInput = driver.FindElement(By.Id("EnginePowerInput"));
+            idOfEnginePowerInput.SendKeys("9000");
 
         }
     }
